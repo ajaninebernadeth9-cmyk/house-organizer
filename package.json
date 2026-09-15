@@ -1,7 +1,7 @@
 {
   "name": "type-a-house-organizer",
   "version": "2.0.0",
-  "description": "Cozy drag-and-drop puzzle — mobile-ready, responsive, works on phone/laptop via link. No build step.",
+  "description": "Cozy drag-and-drop puzzle - mobile-ready, responsive, works on phone/laptop via link. No build step.",
   "type": "module",
   "scripts": {
     "start": "npx serve . -l 3000 --cors",
