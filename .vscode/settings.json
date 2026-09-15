@@ -1,0 +1,10 @@
+{
+  "editor.formatOnSave": true,
+  "editor.tabSize": 2,
+  "files.associations": {
+    "*.css": "css",
+    "*.js": "javascript"
+  },
+  "liveServer.settings.donotShowInfoMsg": true,
+  "liveServer.settings.port": 5500
+}

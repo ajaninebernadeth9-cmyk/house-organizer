@@ -1,0 +1,294 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=5.0">
+<title>Type A: House Organizer</title>
+<meta name="description" content="Type A: House Organizer - a cozy puzzle game where you tidy scattered household items into the right spots before the timer runs out. Play on phone, tablet or laptop — no install needed.">
+<meta name="theme-color" content="#7EA862">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="House Organizer">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="format-detection" content="telephone=no">
+<meta name="mobile-web-app-capable" content="yes">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%237EA862'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-size='28' font-family='sans-serif' font-weight='800' fill='white'%3EA%3C/text%3E%3C/svg%3E">
+<link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'%3E%3Crect width='180' height='180' rx='36' fill='%237EA862'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-size='84' font-family='sans-serif' font-weight='800' fill='white'%3EA%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=31">
+</head>
+<body>
+<div id="app">
+
+  <!-- ============ MENU ============ -->
+  <section id="menu" class="screen">
+    <div class="menu-scene">
+      <div class="float-item fi-book" aria-hidden="true">
+        <svg viewBox="0 0 48 48"><rect x="10" y="27" width="30" height="7" rx="2.5" fill="#C96F4A"/><rect x="13" y="19" width="26" height="7" rx="2.5" fill="#E8A84C"/><rect x="11" y="11" width="28" height="7" rx="2.5" fill="#7EA862"/><rect x="24" y="10" width="3" height="25" rx="1.5" fill="#FFF6E8" opacity=".55"/></svg>
+      </div>
+      <div class="float-item fi-plant" aria-hidden="true">
+        <svg viewBox="0 0 48 48"><path d="M14 30h20l-2.5 12h-15Z" fill="#C96F4A"/><path d="M16.5 34h15" stroke="#96502F" stroke-width="1.6"/><path d="M24 30C24 20 18 16 12 15c1 8 4 13 12 15Z" fill="#7EA862"/><path d="M24 30c0-10 6-14 12-15-1 8-4 13-12 15Z" fill="#5E8A48"/><path d="M24 30V14" stroke="#5E8A48" stroke-width="2" stroke-linecap="round"/></svg>
+      </div>
+      <div class="float-item fi-mug" aria-hidden="true">
+        <svg viewBox="0 0 48 48"><path d="M12 20h20v14a6 6 0 0 1-6 6h-8a6 6 0 0 1-6-6Z" fill="#7AB8D4"/><path d="M32 23h3a5 5 0 0 1 0 10h-3v-4h3a1.5 1.5 0 0 0 0-3h-3Z" fill="#5D9DBB"/><path d="M17 15c0-3 3-3 3-6M24 15c0-3 3-3 3-6" stroke="#B8CAD4" stroke-width="2.2" stroke-linecap="round" fill="none"/></svg>
+      </div>
+
+      <div class="menu-card">
+        <div class="menu-hero">
+          <div class="menu-badge">Puzzle &middot; Organization &middot; Time Management</div>
+        </div>
+        <div class="menu-body">
+          <h1 class="game-title">
+            <span class="t-type">Type A</span><span class="t-colon">:</span>
+            <span class="t-sub">House Organizer</span>
+          </h1>
+          <p class="tagline">Tidy the house, one room at a time!</p>
+
+          <button id="playBtn" class="btn btn-primary btn-lg btn-shine" aria-label="Start playing">Play
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </button>
+
+          <div class="chips">
+            <span class="chip">6 Rooms</span><span class="chip">100 Items</span><span class="chip">Star Ratings</span><span class="chip">Beat the Clock</span>
+          </div>
+          <button id="shareBtn" class="btn btn-ghost" style="margin-top:14px;padding:10px 20px;font-size:14px;min-height:44px;display:inline-flex;align-items:center;gap:7px" aria-label="Copy game link">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg>
+            Share Link
+          </button>
+          <p id="shareFeedback" style="font-size:12px;color:var(--sage-dark);font-weight:700;min-height:16px;margin-top:8px"></p>
+
+          <div class="howto">
+            <p class="label">How to play</p>
+            <ol class="steps">
+              <li>Pick a room from the cozy house map.</li>
+              <li>Drag each scattered item to its correct storage spot.</li>
+              <li>Right spot = <b>+1 point</b> &middot; wrong spot bounces back.</li>
+              <li>Finish before the timer hits zero to unlock the next room!</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ HOUSE MAP ============ -->
+  <section id="houseMap" class="screen hidden">
+    <div class="house-card">
+      <h2 class="house-title">Your House</h2>
+      <p class="house-subtitle">Click a glowing window — 1F Garage · Garden · 2F Living · Kitchen · 3F Bedroom · Bathroom</p>
+
+      <div class="house-illustration">
+        <div class="sun" aria-hidden="true"></div>
+        <div class="cloud c1" aria-hidden="true"></div>
+        <div class="cloud c2" aria-hidden="true"></div>
+
+        <!-- SVG Cottage Scene -->
+        <svg class="house-svg" viewBox="0 0 520 434" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="roofG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#C97B52"/><stop offset=".55" stop-color="#B0603C"/><stop offset="1" stop-color="#93492B"/></linearGradient>
+            <linearGradient id="bodyG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F7EBD9"/><stop offset="1" stop-color="#EADCC4"/></linearGradient>
+            <linearGradient id="doorG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8CBA70"/><stop offset="1" stop-color="#5E8A48"/></linearGradient>
+            <linearGradient id="grassG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#9CC07E"/><stop offset="1" stop-color="#7EA862"/></linearGradient>
+          </defs>
+
+          <!-- Lawn + tufts -->
+          <rect x="-4" y="396" width="528" height="40" fill="url(#grassG)"/>
+          <path d="M36,420q2,-9 4,0M52,424q2,-9 4,0M150,428q2,-9 4,0M360,428q2,-9 4,0M462,420q2,-9 4,0M482,426q2,-9 4,0" stroke="#6A9852" stroke-width="2" fill="none" stroke-linecap="round"/>
+
+          <!-- Walkway -->
+          <path d="M238,397 H302 L330,432 H210 Z" fill="#DCCBA8" stroke="#C4AF8A" stroke-width="2"/>
+          <path d="M228,410 H310 M220,421 H320" stroke="#C9B48E" stroke-width="1.5"/>
+
+          <!-- Fences -->
+          <g>
+            <rect x="2" y="376" width="42" height="4" rx="2" fill="#EFE2CA"/><rect x="2" y="388" width="42" height="4" rx="2" fill="#EFE2CA"/>
+            <rect x="4" y="366" width="7" height="32" rx="2.5" fill="#F6ECDA" stroke="#D8C4A4"/><rect x="17" y="366" width="7" height="32" rx="2.5" fill="#F6ECDA" stroke="#D8C4A4"/><rect x="30" y="366" width="7" height="32" rx="2.5" fill="#F6ECDA" stroke="#D8C4A4"/>
+          </g>
+          <g>
+            <rect x="476" y="376" width="42" height="4" rx="2" fill="#EFE2CA"/><rect x="476" y="388" width="42" height="4" rx="2" fill="#EFE2CA"/>
+            <rect x="483" y="366" width="7" height="32" rx="2.5" fill="#F6ECDA" stroke="#D8C4A4"/><rect x="496" y="366" width="7" height="32" rx="2.5" fill="#F6ECDA" stroke="#D8C4A4"/><rect x="509" y="366" width="7" height="32" rx="2.5" fill="#F6ECDA" stroke="#D8C4A4"/>
+          </g>
+
+          <!-- Chimney + smoke -->
+          <circle class="smoke s1" cx="386" cy="34" r="6" fill="#FFFFFF"/>
+          <circle class="smoke s2" cx="386" cy="26" r="8" fill="#FFFFFF"/>
+          <circle class="smoke s3" cx="386" cy="17" r="10" fill="#FFFFFF"/>
+          <rect x="368" y="52" width="36" height="82" fill="#B4715A"/>
+          <path d="M368,74 h36 M368,96 h36 M368,118 h36" stroke="#96543F" stroke-width="2"/>
+          <rect x="362" y="43" width="48" height="11" rx="3" fill="#8A5A44"/>
+
+          <!-- Roof -->
+          <path d="M28,142 L260,26 L492,142 Z" fill="url(#roofG)" stroke="#7E3E24" stroke-width="3" stroke-linejoin="round"/>
+          <path d="M70,116 Q260,64 450,116" stroke="rgba(126,62,36,.35)" stroke-width="2.5" fill="none"/>
+          <path d="M112,94 Q260,50 408,94" stroke="rgba(126,62,36,.3)" stroke-width="2" fill="none"/>
+          <rect x="24" y="136" width="472" height="13" rx="5" fill="#EFDDBC" stroke="#C9AE84" stroke-width="2"/>
+
+          <!-- Body + siding + foundation -->
+          <rect x="50" y="149" width="420" height="238" rx="8" fill="url(#bodyG)" stroke="#C4A87E" stroke-width="2.5"/>
+          <path d="M52,182 H468 M52,214 H468 M52,246 H468 M52,278 H468 M52,310 H468 M52,342 H468 M52,374 H468" stroke="rgba(138,106,74,.09)" stroke-width="2" fill="none"/>
+          <rect x="44" y="385" width="432" height="13" rx="4" fill="#CDB998" stroke="#A8926E" stroke-width="2"/>
+
+          <!-- Door -->
+          <path d="M222,388 V322 q0,-34 38,-34 q38,0 38,34 V388 Z" fill="#46683A"/>
+          <path d="M228,388 V324 q0,-28 32,-28 q32,0 32,28 V388 Z" fill="url(#doorG)" stroke="#3E5C33" stroke-width="1.5"/>
+          <path d="M245,300 V386 M260,297 V386 M275,300 V386" stroke="rgba(46,74,38,.35)" stroke-width="1.5"/>
+          <circle cx="283" cy="354" r="3.5" fill="#E8B84C" stroke="#B8882E"/>
+          <rect x="218" y="388" width="84" height="9" rx="3" fill="#E9DDC6" stroke="#C9B794" stroke-width="1.5"/>
+
+          <!-- Bushes + berries -->
+          <circle cx="78" cy="380" r="15" fill="#7EA862"/><circle cx="97" cy="386" r="11" fill="#6A9852"/><circle cx="62" cy="387" r="10" fill="#6A9852"/>
+          <circle cx="72" cy="376" r="2" fill="#E8A094"/><circle cx="86" cy="384" r="2" fill="#E8A094"/><circle cx="92" cy="378" r="2" fill="#E8A094"/>
+          <circle cx="442" cy="380" r="15" fill="#7EA862"/><circle cx="423" cy="386" r="11" fill="#6A9852"/><circle cx="458" cy="387" r="10" fill="#6A9852"/>
+          <circle cx="448" cy="376" r="2" fill="#E8A094"/><circle cx="434" cy="384" r="2" fill="#E8A094"/><circle cx="430" cy="378" r="2" fill="#E8A094"/>
+        </svg>
+
+        <!-- 6 Clickable Windows — floors: 3F Bedroom/Bathroom · 2F Living/Kitchen · 1F Garage/Garden -->
+        <div class="house-windows">
+          <div class="house-window" style="grid-row:1;grid-column:1" id="win-bedroom"><span class="win-cross"><i></i><i></i><i></i><i></i></span></div>
+          <div class="house-window" style="grid-row:1;grid-column:2" id="win-bathroom"><span class="win-cross"><i></i><i></i><i></i><i></i></span></div>
+          <div class="house-window" style="grid-row:2;grid-column:1" id="win-living_room"><span class="win-cross"><i></i><i></i><i></i><i></i></span></div>
+          <div class="house-window" style="grid-row:2;grid-column:2" id="win-kitchen"><span class="win-cross"><i></i><i></i><i></i><i></i></span></div>
+          <div class="house-window" style="grid-row:3;grid-column:1" id="win-garage"><span class="win-cross"><i></i><i></i><i></i><i></i></span></div>
+          <div class="house-window" style="grid-row:3;grid-column:2" id="win-garden"><span class="win-cross"><i></i><i></i><i></i><i></i></span></div>
+        </div>
+        <div class="floor-tags" aria-hidden="true">
+          <span class="floor-tag" style="top:41%">3F</span>
+          <span class="floor-tag" style="top:56.5%">2F</span>
+          <span class="floor-tag" style="top:72%">1F</span>
+        </div>
+      </div>
+
+      <button id="menuFromMap" class="btn btn-ghost" style="margin-top:16px">Main Menu</button>
+    </div>
+  </section>
+
+  <!-- ============ GAME ============ -->
+  <section id="game" class="screen hidden">
+    <header id="hud">
+      <div class="hud-left">
+        <button id="homeBtn" class="icon-btn" title="House Map" aria-label="House Map">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/></svg>
+        </button>
+        <button id="restartBtn" class="icon-btn" title="Restart room" aria-label="Restart room">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5"/></svg>
+        </button>
+        <span id="levelPill" class="diff-pill">Living Room</span>
+      </div>
+
+      <div class="hud-center">
+        <div class="hud-stat"><span class="stat-label">Time</span><span id="timer" class="stat-value">1:00</span></div>
+        <div class="hud-stat"><span class="stat-label">Score</span><span id="score" class="stat-value">0</span></div>
+        <div class="hud-stat"><span class="stat-label">Stars</span><span id="starsHud" class="stat-value hud-stars"></span></div>
+      </div>
+
+      <div class="hud-right">
+        <button id="soundBtn" class="btn-toggle">Sound: On</button>
+        <button id="musicBtn" class="btn-toggle">Music: On</button>
+      </div>
+    </header>
+
+    <div id="room" class="room"></div>
+  </section>
+
+  <!-- ============ ARRANGE MODE — Level Up: click drawer → sort photos by height/color/size ============ -->
+  <section id="arrange" class="screen hidden">
+    <div class="arrange-card">
+      <div class="arrange-top">
+        <button id="arrangeBackBtn" class="icon-btn" title="Back" aria-label="Back">←</button>
+        <div class="arrange-head">
+          <h2 id="arrangeTitle">Arrange the Drawer</h2>
+          <p id="arrangeInstruction" class="arrange-instr">Drag the photo items to sort</p>
+        </div>
+        <span id="arrangeProgress" class="diff-pill">1 / 3</span>
+      </div>
+
+      <!-- Hub: choose a drawer -->
+      <div id="arrangeHub">
+        <p class="label">Pick a drawer to arrange</p>
+        <div class="hub-drawers">
+          <button class="hub-drawer" data-challenge="shoes_height">
+            <span class="hub-icon"><svg viewBox="0 0 64 64"><path d="M10 38c0-6 9-9 17-9h12l12-7v23H10z" fill="#EAF6F0" stroke="#6AAE91" stroke-width="2.2"/><path d="M11 38l26-8 4 12H11z" fill="#E23A3A" stroke="#8A2222" stroke-width="1.9"/><rect x="10" y="42" width="30" height="6" rx="3" fill="#FFF" stroke="#B0787E" stroke-width="1.8"/></svg></span>
+            <b>Entry Shelf — Shoes</b><small>Sort by <b>height</b> · smallest → tallest</small>
+          </button>
+          <button class="hub-drawer" data-challenge="makeup_color">
+            <span class="hub-icon"><svg viewBox="0 0 64 64"><rect x="12" y="18" width="40" height="28" rx="6" fill="#2B2B2B"/><circle cx="22" cy="28" r="5" fill="#E8B8A0"/><circle cx="35" cy="28" r="5" fill="#C78A6A"/><circle cx="22" cy="39" r="6" fill="#8B5A3A"/><circle cx="37" cy="40" r="5" fill="#D9A8A0"/></svg></span>
+            <b>Makeup Drawer</b><small>Sort by <b>color</b> · light → dark</small>
+          </button>
+          <button class="hub-drawer" data-challenge="kitchen_height">
+            <span class="hub-icon"><svg viewBox="0 0 64 64"><rect x="29" y="10" width="6" height="20" rx="3" fill="#C96F4A"/><ellipse cx="32" cy="38" rx="10" ry="8" fill="#8E9AA6"/></svg></span>
+            <b>Kitchen Tools</b><small>Sort by <b>height</b> · shortest → tallest</small>
+          </button>
+        </div>
+        <p class="arrange-hint">Tip: Click a drawer — its photo items appear. Drag left ↔ right to reorder. Press <b>Check</b>.</p>
+      </div>
+
+      <!-- Tray: sorting -->
+      <div id="arrangeTrayWrap" class="hidden">
+        <div id="arrangeTray" class="arrange-tray"></div>
+        <div class="arrange-actions">
+          <button id="checkArrangeBtn" class="btn btn-primary">Check</button>
+          <button id="arrangeHintBtn" class="btn btn-ghost">Hint</button>
+          <button id="backToHubBtn" class="btn btn-ghost">Back to Drawers</button>
+        </div>
+        <p id="arrangeFeedback" class="arrange-feedback"></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ OVERLAY (win / lose) ============ -->
+  <div id="overlay" class="overlay hidden">
+    <div class="overlay-card" id="overlayCard"></div>
+  </div>
+
+  <!-- ============ DIFFICULTY POPUP ============ -->
+  <div id="diffPopup" class="overlay hidden">
+    <div class="overlay-card diff-popup-card">
+      <div class="oc-icon" id="diffRoomIcon"></div>
+      <div class="overlay-title" id="diffRoomName">Living Room</div>
+      <p class="label" style="margin-top:12px">Choose difficulty</p>
+      <div class="diff-btns" id="diffBtnsMap">
+        <button class="diff-btn" data-diff="easy"><b>Easy</b><span>45s &middot; 3 items</span></button>
+        <button class="diff-btn selected" data-diff="medium"><b>Medium</b><span>60s &middot; 6 items</span></button>
+        <button class="diff-btn" data-diff="hard"><b>Hard</b><span>80s &middot; 9 items</span></button>
+      </div>
+      <div class="overlay-actions">
+        <button class="btn btn-primary" id="playRoomBtn">Play</button>
+        <button class="btn btn-ghost" id="closeDiffPopup">Back</button>
+      </div>
+    </div>
+  </div>
+
+</div>
+<script src="game.js?v=31"></script>
+<script>
+// Share link — copy current URL for mobile sharing
+(function(){
+  const btn=document.getElementById('shareBtn');
+  const fb=document.getElementById('shareFeedback');
+  if(!btn) return;
+  btn.addEventListener('click', async ()=>{
+    const url=location.href;
+    try{
+      if(navigator.share && navigator.canShare && navigator.canShare({url})){
+        await navigator.share({title: document.title, text: 'Play Type A: House Organizer — tidy the house before time runs out!', url});
+        fb.textContent='Shared!';
+      } else if(navigator.clipboard){
+        await navigator.clipboard.writeText(url);
+        fb.textContent='Link copied! Share it with friends.';
+      } else {
+        prompt('Copy this link:', url);
+        fb.textContent='Copy the link above.';
+      }
+    }catch(e){
+      try{ await navigator.clipboard.writeText(url); fb.textContent='Link copied!'; }catch(_){ fb.textContent=url; }
+    }
+    btn.style.transform='scale(.97)';
+    setTimeout(()=>btn.style.transform='',160);
+    setTimeout(()=>fb.textContent='',4000);
+  });
+})();
+</script>
+</body>
+</html>
