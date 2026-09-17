@@ -1,7 +1,7 @@
 {
   "name": "type-a-house-organizer",
-  "version": "2.0.0",
-  "description": "Cozy drag-and-drop puzzle - mobile-ready, responsive, works on phone/laptop via link. No build step.",
+  "version": "2.1.0",
+  "description": "Cozy drag-and-drop puzzle - mobile-ready v2.1, larger objects for phones & laptops, clean responsive layout, one-link sharing. No build step.",
   "type": "module",
   "scripts": {
     "start": "npx serve . -l 3000 --cors",
@@ -12,7 +12,7 @@
     "deploy:netlify": "npx netlify-cli deploy --dir=. --prod",
     "deploy:vercel": "npx vercel --prod"
   },
-  "keywords": ["game", "puzzle", "mobile", "responsive", "pwa"],
+  "keywords": ["game", "puzzle", "mobile", "responsive", "pwa", "laptop", "touch"],
   "author": "",
   "license": "MIT",
   "devDependencies": {
