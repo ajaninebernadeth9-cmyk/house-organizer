@@ -40,17 +40,21 @@ npx localtunnel --port 3000
 2. Drag the entire `FINAL Draft Game` folder onto the page
 3. Get `https://your-name-xxx.netlify.app` — share it. Auto HTTPS, auto responsive.
 
-### Option C — GitHub Pages (free, permanent link)
+### Option C — GitHub Pages (free, permanent link) ✅ LIVE
+**Your permanent link:**
+> **https://ajaninebernadeth9-cmyk.github.io/house-organizer/**
+
+Set up once:
 ```bash
 git init
 git add .
-git commit -m "feat: mobile-ready v2.0"
+git commit -m "feat: mobile-ready v2.1"
 git branch -M main
-git remote add origin https://github.com/YOURNAME/house-organizer.git
+git remote add origin https://github.com/ajaninebernadeth9-cmyk/house-organizer.git
 git push -u origin main
-# then: GitHub → Settings → Pages → Source: GitHub Actions
-# workflow file already included: .github/workflows/deploy.yml
-# Your link: https://YOURNAME.github.io/house-organizer/
+# then: GitHub → Settings → Pages → Source: GitHub Actions (done)
+# workflow file auto-enables Pages: .github/workflows/deploy.yml
+# every future git push → auto-redeploys to the same link
 ```
 
 **Vercel alternative:** `npx vercel --prod` in this folder (config already in `vercel.json`).
