@@ -351,7 +351,7 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;opacity:.38;b
   .stat-label{font-size:8.5px}.stat-value{font-size:17px}
   .btn-toggle{padding:8px 12px;font-size:12px;min-height:38px}
   .diff-pill{padding:7px 12px;font-size:12px}
-  #room{min-height:calc(100dvh - 124px);border-radius:18px}
+  #room{min-height:560px;border-radius:18px}
   .item{width:72px;height:72px}.item svg,.item img{width:60px;height:60px}
   .slot{width:50px;height:50px}.item.placed{width:50px;height:50px}.item.placed svg,.item.placed img{width:40px;height:40px}
   .comp-label{font-size:8.5px;padding:2px 7px}
@@ -361,11 +361,11 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;opacity:.38;b
   .menu-body{padding:0 20px 20px;margin-top:-18px}
   .game-title{font-size:30px;margin:8px 0 6px}.tagline{font-size:14.5px;margin-bottom:12px}
   .btn-lg{padding:13px 32px;font-size:18px;min-height:52px}
-  .chips{margin-top:12px}.howto{display:none}
+  .chips{margin-top:12px}
   .house-title{font-size:24px;margin-bottom:2px}.house-subtitle{font-size:13px;margin-bottom:10px}
-  .house-illustration{max-width:min(620px,calc((100dvh - 200px)*1.19));border-radius:20px}
+  .house-illustration{max-width:640px;border-radius:20px}
   .room-card-name{font-size:10px}
-  .overlay-card{padding:18px;max-width:400px;max-height:94dvh;overflow:auto}
+  .overlay-card{padding:18px;max-width:400px;max-height:94vh;overflow:auto}
   .overlay-title{font-size:21px}.oc-icon{width:60px;height:60px}.oc-icon svg,.oc-icon img{width:34px;height:34px}
   .stats-grid{margin:10px 0}.diff-btns{margin:10px 0 14px}.diff-btn{min-height:66px;padding:12px 14px}
   .arrange-card{padding:14px;border-radius:20px}

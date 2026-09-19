@@ -392,7 +392,7 @@ function loadProgress(){ try{ localStorage.removeItem('house_organizer_progress'
 function resetProgress(){ Object.keys(state.progress).forEach((id,i)=>{ state.progress[id]={unlocked:i===0,completed:false,bestStars:0}; }); try{ localStorage.removeItem('house_organizer_progress'); }catch(e){} }
 
 /* ---------------- Screens ---------------- */
-function showScreen(name){ menuScreen.classList.toggle('hidden',name!=='menu'); houseMapScreen.classList.toggle('hidden',name!=='houseMap'); gameScreen.classList.toggle('hidden',name!=='game'); if(arrangeScreen) arrangeScreen.classList.toggle('hidden',name!=='arrange'); }
+function showScreen(name){ menuScreen.classList.toggle('hidden',name!=='menu'); houseMapScreen.classList.toggle('hidden',name!=='houseMap'); gameScreen.classList.toggle('hidden',name!=='game'); if(arrangeScreen) arrangeScreen.classList.toggle('hidden',name!=='arrange'); try{ window.scrollTo(0,0); }catch(e){} }
 function showMenu(){ stopTimer(); stopMusic(); overlay.classList.add('hidden'); diffPopup.classList.add('hidden'); showScreen('menu'); }
 function showHouseMap(){ stopTimer(); stopMusic(); overlay.classList.add('hidden'); diffPopup.classList.add('hidden'); renderHouseMap(); showScreen('houseMap'); }
 function showArrange(){ stopTimer(); stopMusic(); overlay.classList.add('hidden'); diffPopup.classList.add('hidden'); showScreen('arrange'); }
