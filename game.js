@@ -164,8 +164,9 @@ const ICONS = {
   washcloths: PNG('washcloths','Washcloths'),
   shirts_bathroom: PNG('shirts_bathroom','Shirts'),
   /* legacy aliases (room icons, arrange fallback) */
-  book: `assets/objects/novels.png`.startsWith('assets') ? PNG('novels','Novels') : '',
+  book: PNG('novels','Novels'),
   potted_plant: PNG('rose_pot','Rose Pot'),
+  palette: PNG('lipstick','Lipstick'),
 };
 
 const CATEGORIES = {

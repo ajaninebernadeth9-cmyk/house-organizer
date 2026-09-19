@@ -9,7 +9,7 @@
   "display_override": ["standalone", "minimal-ui", "browser"],
   "background_color": "#F8E8D8",
   "theme_color": "#7EA862",
-  "orientation": "any",
+  "orientation": "landscape",
   "categories": ["games", "puzzle", "entertainment"],
   "lang": "en",
   "icons": [
